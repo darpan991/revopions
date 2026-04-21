@@ -1,0 +1,55 @@
+/*** 
+
+====================================================================
+Section Title
+====================================================================
+
+***/
+
+.section-title {
+    position: relative;
+    // @include media-breakpoint-down(xxs) {
+    //     text-align: center;
+    // }
+    .sub-title {
+        svg{
+            color: var(--theme-color1);
+            margin-top: -2px;
+        }
+        span {
+  
+            color: var(--theme-color-white);
+            font-size: 14px;
+            font-weight: 400;
+            line-height: normal;
+            text-transform: uppercase;
+            font-family: var(--heading-font-family);
+        }
+    }
+    .title {
+        color: var(--theme-color-white);
+        font-weight: 500;
+        line-height: 1.2;
+        letter-spacing: -1.5px;
+        @include media-breakpoint-down(sm) {
+            font-size: 40px;
+            line-height: 50px;
+        }
+        @include media-breakpoint-down(xxs) {
+            font-size: 35px;
+            line-height: 40px;
+        }
+        span {
+            color: var(--theme-color1);
+            font-weight: 400;
+            font-style: italic;
+        }
+    }
+}
+
+.section-title-area {
+    @include flex-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    row-gap: 30px;
+}

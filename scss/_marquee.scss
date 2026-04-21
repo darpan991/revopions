@@ -1,0 +1,422 @@
+/***
+
+====================================================================
+    Marquee Section
+====================================================================
+
+***/
+
+.marquee-area2 {
+  margin-bottom: 150px;
+  position: relative;
+  z-index: 99;
+  @media (max-width: 1499.98px){
+    margin-bottom: 100px;
+  }
+
+  @include media-breakpoint-down (lg){
+    margin-bottom: 15px;
+  }
+
+  .marque-object2 {
+    position: absolute;
+    right: -60px;
+    top: -100px;
+
+    @include media-breakpoint-down (xl){
+      display: none;
+    }
+  }
+
+  .light-marque {
+    position: absolute;
+    top: -30%;
+    right: -60px;
+    z-index: 1;
+
+    @include media-breakpoint-down (xl){
+      display: none;
+    }
+  }
+
+  &.style-marquee2 {
+    margin: 0 60px;
+    background-color: var(--theme-color3);
+    border:1px solid rgba(255, 255, 255, 0.13);
+    border-radius: 40px;
+    padding-bottom: 190px;
+
+    @include media-breakpoint-down (xxxl){
+      margin: 0 35px;
+    }
+
+    @include media-breakpoint-down (xxl){
+      margin: 0 25px;
+    }
+
+    @include media-breakpoint-down (xl){
+      margin: 0 15px;
+      padding-left: 10px !important;
+      padding-right: 10px !important;
+    }
+    @include media-breakpoint-down (xl){
+      padding-bottom: 120px;
+    }
+
+    .marque-object {
+      text-align: center;
+      margin-bottom: -190px;
+
+      @include media-breakpoint-down (xl){
+        margin-bottom: 0;
+      }
+    }
+
+    .marquee-title {
+      text-align: center;
+      position: relative;
+      z-index: 99;
+      margin-bottom: 60px;
+
+      .title {
+        font-size: 60px;
+        font-weight: 500;
+        line-height: 133.333%;
+        color: var(--theme-color-white);
+        margin-bottom: 40px;
+
+        @include media-breakpoint-down (md){
+          font-size: 40px;
+        }
+
+        @include media-breakpoint-down (sm){
+          font-size: 36px;
+        }
+      }
+    }
+
+    .marquee-section {
+      &.style-2 {
+        background-color: var(--theme-color2);
+        position: relative;
+        z-index: 81;
+      }
+    }
+  }
+}
+
+.marquee-section {
+  position: relative;
+  background-color: var(--theme-color1);
+  padding: 40px 0;
+  z-index: 9;
+
+  
+  &.style-2 {
+    transform: rotate(7.174deg);
+    background-color: var(--theme-color3);
+    margin-bottom: -135px;
+
+    @include media-breakpoint-down (lg){
+     margin-bottom: 0;
+     transform: rotate(0deg);
+   }
+
+   .marquee-group {
+    animation: scroll2 var(--duration) linear infinite;
+  }
+
+  .text {
+    font-size: 40px;
+    font-weight: 500;
+    color: var(--theme-color-white);
+  }
+}
+
+&.style-3 {
+  transform: rotate(-5deg);
+
+  @include media-breakpoint-down (lg){
+   transform: rotate(0deg);
+ }
+}
+
+@include media-breakpoint-down (xl){
+  padding: 25px 0;
+}
+}
+
+.marquee-two {
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: flex;
+  overflow: hidden;
+  user-select: none;
+  gap: var(--gap);
+
+
+  .marquee-group {
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    gap: var(--gap);
+    min-width: 100%;
+    animation: scroll var(--duration) linear infinite;
+  }
+
+  .text {
+    font-size: 40px;
+    line-height: 1.2;
+    color: var(--theme-color-black);
+    font-weight: 500;
+    margin: 0 40px;
+    position: relative;
+    font-family: var(--heading-font-family);
+    display: flex;
+    align-items: center;
+    gap: 30px;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .marquee-group {
+      animation-play-state: paused;
+    }
+  }
+}
+
+/* Global keyframes — declared only once */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+}
+
+@keyframes scroll2 {
+  0% {
+    transform: translateX(calc(-100% - var(--gap)));
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+
+.marquee-section-2 {
+  &.marquee-style-2 {
+    position: relative;
+    z-index: 9;
+    margin-top: 45px;
+    margin-bottom: 32px;
+
+    @include media-breakpoint-down (xl){
+     margin-top: 0;
+     margin-bottom: 0;
+   }
+
+   .marque-line1 {
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    width: 620px;
+    height: 235px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 152px;
+    z-index: -1;
+
+    @include media-breakpoint-down (xxxl){
+      width: 550px;
+    }
+
+    @include media-breakpoint-down (xxl){
+      width: 500px;
+    }
+
+    @include media-breakpoint-down (xl){
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 30px;
+      bottom: 0;
+      width: 468px;
+      content: "";
+      height: 235px;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 152px;
+      z-index: -1;
+    }
+  }
+
+  .marque-line2 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    bottom: 0;
+    width: 666px;
+    height: 235px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 152px;
+    z-index: -1;
+
+    @include media-breakpoint-down (xxxl){
+      width: 550px;
+    }
+
+    @include media-breakpoint-down (xxl){
+      width: 500px;
+    }
+
+    @include media-breakpoint-down (xl){
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100px;
+      bottom: 0;
+      width: 468px;
+      content: "";
+      height: 235px;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 152px;
+      z-index: -1;
+    }
+  }
+
+  .marque-line3 {
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: 0;
+    width: 620px;
+    height: 235px;
+    border: 1px solid rgba(255, 255, 255, 0.20);
+    border-radius: 152px;
+    z-index: -1;
+
+    @include media-breakpoint-down (xxxl){
+      width: 550px;
+    }
+
+    @include media-breakpoint-down (xxl){
+      width: 500px;
+    }
+
+    @include media-breakpoint-down (xl){
+      display: none;
+    }
+
+    &::before {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 100px;
+      bottom: 0;
+      width: 468px;
+      content: "";
+      height: 235px;
+      border: 1px solid rgba(255, 255, 255, 0.20);
+      border-radius: 152px;
+      z-index: -1;
+    }
+  }
+
+  .marquee {
+    background: none;
+    margin: 0;
+    padding: 0;
+  }
+}
+.marquee {
+  background: linear-gradient(90deg, rgba(13, 13, 13, 0.00) 0%, rgba(136, 255, 42, 0.60) 36.07%, rgba(13, 13, 13, 0.00) 100%);
+  margin: 0 60px;
+  padding: 60px 0;
+  position: relative;
+  --duration: 30s;
+  --gap: 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  gap: 0;
+
+  @include media-breakpoint-down (xxxl){
+    margin: 0 35px;
+  }
+
+  @include media-breakpoint-down (xxl){
+    margin: 0 25px;
+  }
+
+  @include media-breakpoint-down (xl){
+    margin: 0 15px;
+    padding-left: 10px !important;
+    padding-right: 10px !important;
+  }
+
+  .marquee-group {
+    -ms-flex-negative: 0;
+    flex-shrink: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex
+    ;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: distribute;
+    justify-content: space-around;
+    gap: 24px;
+    min-width: 100%;
+    -webkit-animation: scroll var(--duration)
+    linear infinite;
+    animation: scroll var(--duration)
+    linear infinite;
+
+    .text {
+      color: var(--theme-color-white);
+      font-size: 150px;
+      font-weight: 500;
+      line-height: 1;
+      letter-spacing: -3px;
+      text-transform: uppercase;
+
+      @include media-breakpoint-down (xl){
+        font-size: 90px;
+      }
+
+      @include media-breakpoint-down (md){
+        font-size: 80px;
+      }
+    }
+
+    .marquee-dot {
+      background-color: var(--theme-color1);
+      display: inline-block;
+      width: 8px;
+      height: 8px;
+      border-radius: 8px;
+    }
+  }
+}
+}

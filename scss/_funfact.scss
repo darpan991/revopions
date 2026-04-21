@@ -1,0 +1,127 @@
+
+.funfact-one {
+  position: relative;
+  z-index: 9;
+  .right-light {
+    position: absolute;
+    top: -12%;
+    right: 0;
+    z-index: -1;
+  }
+  .left-light {
+    position: absolute;
+    top: -10%;
+    left: 0;
+    z-index: -1;
+  }
+  .vec-shape {
+    position: absolute;
+    bottom: 100px;
+    left: -7%;
+  }
+  .section-title {
+    p {
+      margin-top: 20px;
+    }
+  }
+  .get-in-touch {
+    color: var(--theme-color-white);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: capitalize;
+    border-radius: 81px;
+    padding: 30px  28px;
+    text-align: center;
+    border-radius: 81px;
+    border: 1px solid #222;
+    background: var(--headings-color);
+    margin-top: 60px;
+    a {
+      color: var(--theme-color1);
+      font-weight: 650;
+      text-decoration-line: underline;
+      text-decoration-style: solid;
+      text-decoration-skip-ink: auto;
+      text-decoration-thickness: auto;
+      text-underline-offset: auto;
+    }
+    @include media-breakpoint-down(md) {
+      padding: 12px 30px;
+    }
+  }
+  &__items {
+    display: grid;
+    grid-template-columns: auto auto;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    @include media-breakpoint-down(md){
+      gap: 10px;
+    }
+    &.style-2 {
+      grid-template-columns: auto;
+      @include media-breakpoint-down(xl) {
+        margin-top: 0;
+      }
+    }
+    @include media-breakpoint-down(xl) {
+      margin-top: 40px;
+    }
+    @include media-breakpoint-down(sm) {
+      grid-template-columns: auto;
+    }
+  }
+  &__shape {
+    position: absolute;
+    top: 50%;
+    left: 56.5%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    background-color: var(--theme-color1);
+    @include media-breakpoint-down(md){
+      left: 50%;
+    }
+    @include media-breakpoint-down(sm) {
+      display: none;
+    }
+  }
+  &__single-item {
+    @include icon;
+    background-color: #222;
+    flex-direction: column;
+    height: 312px;
+    width: 312px;
+    @include transition;
+    @include media-breakpoint-down(md){
+      height: 260px;
+      width: 260px;
+    }
+    .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: var(--theme-color1);
+      margin-bottom: 15px;
+    }
+    .num {
+      color: var(--theme-color-white);
+    }
+    .tag {
+      color: var(--text-color);
+      font-weight: 500;
+    }
+    &.style-1 {
+      margin-right: -40px;
+      @include media-breakpoint-down(md) {
+        margin-right: 0;
+      }
+    }
+    &:hover{
+      background-color: var(--headings-color);
+    }
+  }
+}

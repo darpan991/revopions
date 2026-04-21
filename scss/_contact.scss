@@ -1,0 +1,341 @@
+/*** 
+
+====================================================================
+		Contact Sectiom
+====================================================================
+
+***/
+.form-box {
+	position: relative;
+	z-index: 1;
+	background-color: var(--theme-color-white);
+	padding: 60px;
+	border-radius: 20px;
+	margin-top: 70px;
+	max-width: 590px;
+	@include media-breakpoint-down(lg) {
+		padding: 20px;
+		max-width: 100%;
+	}
+	.form-clt {
+		input,
+		textarea {
+			width: 100%;
+			padding: 15px 30px;
+			outline: none;
+			background-color: var(--theme-color-white);
+			color: var(--text-color);
+			text-transform: capitalize;
+			border-radius: 10px;
+			border: 1px solid var(--border-theme-color2);
+		}
+	}
+}
+
+.lets-talk-section {
+	position: relative;
+
+	.object-shape1 {
+		position: absolute;
+		top: 0px;
+		left: -60px;
+	}
+
+	.object-shape2 {
+		position: absolute;
+		right: -50px;
+		top: 0;
+		z-index: 99;
+	}
+
+	.lets-talk-area {
+		position: relative;
+		margin: 0 60px;
+		z-index: 9;
+		padding-bottom: 210px !important;
+
+		 @include media-breakpoint-down (xxxl){
+			margin: 0 35px;
+		}
+
+        @include media-breakpoint-down (xxl){
+        margin: 0 25px;
+    }
+
+    @include media-breakpoint-down (xl){
+        margin: 0 15px;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+		padding-bottom: 150px !important;
+    }
+
+		&::before {
+			@include before;
+			border-radius: 40px;
+			background-color: var(--theme-color1);
+			z-index: -1;
+			top: 100px;
+			height: initial;
+		}
+	}
+
+	.arrow-icon {
+		font-size: 42px;
+		display: inline-block;
+		width: 200px;
+		height: 200px;
+		line-height: 200px;
+		border-radius: 50%;
+		background-color: var(--theme-color1);
+		color: var(--theme-color-white);
+		position: relative;
+		text-align: center;
+		z-index: 9;
+		margin: 0 auto 40px;
+        @include transition(all 300ms ease);
+		&::before {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			width: 178px;
+			height: 178px;
+			line-height: 178px;
+			border-radius: 50%;
+			background-color: var(--theme-color2);
+			content: "";
+			transform: translate(-50%,-50%);
+			z-index: -1;
+           @include transition(all 300ms ease);
+		}
+		&:hover{
+			background-color: var(--theme-color3);
+			color: var(--theme-color-white);
+			&::before{
+				background-color: var(--theme-color2);
+			}
+		}
+	}
+
+	.title {
+		color: var(--theme-color3);
+		font-size: 80px;
+		font-weight: 500;
+		line-height: 100%;
+		letter-spacing: -1.6px;
+		text-align: center;
+
+		@include media-breakpoint-down (xl){
+			font-size: 65px;
+			line-height: 130%;
+		}
+
+		@include media-breakpoint-down (md){
+			font-size: 55px;
+		}
+
+		@include media-breakpoint-down (sm){
+			font-size: 45px;
+		}
+
+		@include media-breakpoint-down (xxs){
+			font-size: 35px;
+		}
+	}
+}
+
+.contact-content-style1 {
+	position: relative;
+	.object-vec {
+		position: absolute;
+		bottom: -20%;
+		left: -20%;
+
+		@include media-breakpoint-down (xxl){
+			display: none;
+		}
+	}
+	.contact-image {
+		position: relative;
+		border-radius: 40px;
+		margin-top: 60px;
+		.connect-info {
+			position: absolute;
+			bottom: 40px;
+			left: 60px;
+			right: 60px;
+			@include media-breakpoint-down (xxl){
+				left: 25px;
+				right: 25px;
+			}
+			@media (max-width: 399.98px){
+				left: 10px;
+				right: 10px;
+			}
+			li {
+				display: flex;
+				align-items: center;
+				gap: 100px;
+				@include media-breakpoint-down (xxl){
+					gap: 30px;
+				}
+				@media (max-width: 399.98px){
+					gap: 15px;
+				}
+				span {
+					color: var(--theme-color-white);	
+					font-size: 16px;
+					letter-spacing: -0.32px;
+					display: inline-block;
+					flex-basis: 20%;
+					position: relative;
+					&::before {
+						position: absolute;
+						right: -70px;
+						top: 16px;
+						content: "";
+						width: 45px;
+						height: 1px;
+						background-color: var(--theme-color1);
+						@media (max-width: 1399.98px){
+							right: -20px;
+							width: 20px;
+						}
+						@include media-breakpoint-down (xl){
+							display: none;
+						}
+					}
+					@media (max-width: 399.98px){
+						flex-basis: auto;
+					}
+				}
+				a {
+					color: var(--theme-color-white);	
+					font-size: 24px;
+					font-weight: 500;
+					text-transform: capitalize;
+				}
+			}
+		}
+		&::before {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			top: 0;
+			content: "";
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+			background: linear-gradient(355deg, #000 12.78%, rgba(0, 0, 0, 0.00) 68.07%);
+		}
+		img {
+			width: 100%;
+			height: 100%;
+			border-radius: 40px;
+		}
+	}
+}
+
+.contact-form-style-1 {
+	margin-left: 40px;
+	position: relative;
+
+	@include media-breakpoint-down (xl){
+		margin-left: 0;
+	}
+
+	.line-shape {
+		position: absolute;
+		bottom: 0;
+		right: 50px;
+		opacity: .1;
+	}
+
+	.contact-form-box {
+		background-color: var(--body-bg);
+		border: 1px solid rgba(255, 255, 255, 0.13);
+		padding: 60px 60px;
+		border-radius: 40px;
+
+		@include media-breakpoint-down (md){
+			padding: 50px 30px;
+		}
+
+		.form-clt {
+			input,textarea {
+				border-bottom: 1px solid #333;
+				padding-bottom: 30px;
+				color: var(--theme-color-white);
+				outline: none;
+				background: transparent;
+				width: 100%;
+
+				&::placeholder {
+					color: var(--theme-color-white);
+				}
+			}
+
+			textarea {
+				padding-bottom: 140px;
+			}
+		}
+
+		.contact-button {
+			button {
+				background: transparent;
+			}
+		}
+	}
+}
+
+.contact-section-4 {
+	position: relative;
+
+	.contact-title {
+		line-height: 1;
+		color: var(--theme-color1);
+		text-align: center;
+		font-size: 160px;
+		font-weight: 700;
+		text-transform: uppercase;
+		margin-bottom: 75px;
+
+		@include media-breakpoint-down (xl){
+			font-size: 115px;
+		}
+
+		@include media-breakpoint-down (lg){
+			font-size: 75px;
+		}
+
+		@include media-breakpoint-down (md){
+			font-size: 70px;
+		}
+
+		@include media-breakpoint-down (sm){
+			font-size: 50px;
+		}
+
+		span {
+			color: transparent;
+			-webkit-text-stroke-width: 1px;
+			-webkit-text-stroke-color: var(--border-color1-rgba);
+		}
+	}
+
+	.contact-vec {
+		position: absolute;
+		top: 120px;
+		right: 0;
+
+		@include media-breakpoint-down (xxl){
+			display: none;
+		}
+	}
+
+	.contact-light {
+		position: absolute;
+		bottom: -15%;
+		left: 0;
+	}
+}
